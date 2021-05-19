@@ -17,6 +17,13 @@ s="aaaxbbbbyyhwawiwjjjwwm"
 error_printer(s) => "8/22"
 */
 
-function printerError(s) {
-    // your code
+const printerError = (s) =>  {
+    let counter = 0;
+    for(let i = 0; i < s.length; i++) {
+        if(s.charCodeAt(i) > 109) {
+            counter++;
+        }
+    }
+
+    return counter + '/' + s.length;
 }
